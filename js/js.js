@@ -5,7 +5,6 @@ var
 
 canv.width = window.innerWidth;
 canv.height = window.innerHeight;
-isMouseDown = false;
 // var x = 50;
 ctx.fillStyle = 'black';
 //ctx.fillRect(x, 50, 150, 75); //Рисует заполненный квадрат
@@ -18,7 +17,6 @@ ctx.strokeStyle = 'black';  //Цвет для незаполненных фиг�
 //Градиент
 // var
 //     grad = ctx.createLinearGradient(0, 0, canv.width, 0);
-//
 // grad.addColorStop('.38','white');
 // grad.addColorStop('.50','#f09e9e');
 // grad.addColorStop('.68','red');
@@ -68,7 +66,6 @@ canv.addEventListener('mousemove', function(e){
     if (isMouseDown) {
         ctx.lineTo(e.clientX, e.clientY);
         ctx.stroke();
-
         ctx.beginPath();
         ctx.arc(e.clientX, e.clientY, 10, 0,Math.PI * 2);
         ctx.fill();
@@ -81,7 +78,6 @@ canv.addEventListener('mousemove', function(e){
 function clear(){
     ctx.fillStyle = 'white';
     ctx.fillRect(0,0, canv.width, canv.height);
-
     ctx.beginPath();
     ctx.fillStyle = 'black';
 }
@@ -96,7 +92,6 @@ document.addEventListener('keydown', function(e) {
     }
     if(e.keyCode == 67) {
         clear();
-
     }
 
 });
